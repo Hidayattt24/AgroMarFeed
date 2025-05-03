@@ -1,27 +1,29 @@
-
 export const bannerData = [
-    {
-        title:'Dominate the Competition with the Legion X7',
-        description:'Unleash ultimate gaming power with the Legion X7. Featuring a top-of-the-line processor, powerful graphics card, and a high-refresh-rate display.',
-        images:['/images/banner/gaming-laptop.png'],
-        button:'Shop Gaming Laptops',
-        discountText:'Buy now Get 10% off',
-        link: `shop?category=Computers`
-    },
-    {
-        title:'Introducing the All-New NovaPhone 15',
-        description:'Experience unparalleled performance with our most advanced phone yet. Blazing-fast processor, stunning camera system, and a revolutionary display.',
-        images:['/images/banner/iphone.png'],
-        button:'Order Now',
-        discountText:'Buy now Get 5% off',
-        link:`shop?category=Smartphones`
-    },
-    {
-        title:'High-resolution noise-canceling headphones.',
-        description:'Immerse Yourself in Pure Sound with the SonicPro Max',
-        images:['/images/banner/headphone.png'],
-        button:'Shop Headphones',
-        discountText:'Buy now Get 15% off',
-        link:'shop?category=Headphones'
-    },
-]
+  {
+    title: "Revolusi Pakan Ikan Ramah Lingkungan",
+    description:
+      "Penuhi kebutuhan nutrisi ikan dengan pelet berkualitas dari limbah udang dan rumput laut. Kaya protein, hemat biaya, dan mendukung zero waste!",
+    images: ["/images/banner/gaming-laptop.png"],
+    button: "Lihat Pakan Ikan",
+    discountText: "Beli sekarang diskon 10%",
+    link: `shop?category=Computers`,
+  },
+  {
+    title: "Pakan Organik untuk Ternak Sehat",
+    description:
+      "Fermentasi dari jerami dan ampas tebu yang bergizi tinggi. Cocok untuk sapi, kambing, dan domba. Solusi hemat dan berkelanjutan.",
+    images: ["/images/banner/iphone.png"],
+    button: "Pesan Pakan Ternak",
+    discountText: "Beli sekarang diskon 5%",
+    link: `shop?category=Smartphones`,
+  },
+  {
+    title: "Solusi Pakan Ayam & Burung dari Limbah Buah",
+    description:
+      "Manjakan ayam dan burung peliharaan Anda dengan pakan organik dari kulit buah dan biji kopi. Sehat, alami, dan tanpa bahan kimia.",
+    images: ["/images/banner/headphone.png"],
+    button: "Cek Pakan Organik",
+    discountText: "Beli sekarang diskon 15%",
+    link: "shop?category=Headphones",
+  },
+];
