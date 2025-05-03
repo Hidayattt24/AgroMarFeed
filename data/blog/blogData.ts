@@ -3,7 +3,7 @@ export const blogPosts = [
     title: "5 Alat Terbaik untuk Peternak dan Petani di Tahun 2024",
     author: "Ahmad Fadly (Ahli Pertanian)",
     category: "Tren Teknologi Pertanian",
-    image: "/images/products/senheiser-removebg-preview.png",
+    image: "/images/products/alat-ternak2.jpg",
     excerpt:
       "Bingung memilih alat yang tepat untuk mendukung usaha peternakan dan pertanian Anda? Artikel ini membahas 5 alat yang dapat membantu Anda meningkatkan efisiensi dan produktivitas dalam usaha agro-maritim!",
     content: [
@@ -13,7 +13,7 @@ export const blogPosts = [
       },
       {
         type: "image",
-        src: "/images/products/prothonics-removebg-preview.png",
+        src: "/images/products/alat-ternak1.jpg",
         alt: "Kabel Penghubung Tanaman",
       },
       {
@@ -30,7 +30,7 @@ export const blogPosts = [
       },
       {
         type: "image",
-        src: "/images/products/apple-watch-9-3-removebg-preview.png",
+        src: "/images/products/alat-ternak3.jpg",
         alt: "Smartwatch untuk Petani",
       },
       {
