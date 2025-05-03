@@ -6,7 +6,7 @@ export const bannerData = [
     images: ["/images/banner/gaming-laptop.png"],
     button: "Lihat Pakan Ikan",
     discountText: "Beli sekarang diskon 10%",
-    link: `shop?category=Computers`,
+    link: `shop?pakan=ikan`,
   },
   {
     title: "Pakan Organik untuk Ternak Sehat",
@@ -15,7 +15,7 @@ export const bannerData = [
     images: ["/images/banner/iphone.png"],
     button: "Pesan Pakan Ternak",
     discountText: "Beli sekarang diskon 5%",
-    link: `shop?category=Smartphones`,
+    link: `shop?pakan=ternak`,
   },
   {
     title: "Solusi Pakan Ayam & Burung dari Limbah Buah",
@@ -24,6 +24,6 @@ export const bannerData = [
     images: ["/images/banner/headphone.png"],
     button: "Cek Pakan Organik",
     discountText: "Beli sekarang diskon 15%",
-    link: "shop?category=Headphones",
+    link: "shop?pakan=burung",
   },
 ];

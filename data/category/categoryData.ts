@@ -1,28 +1,23 @@
- export const dummyCategories = [
-    { 
-      id: 1, 
-      name: "Smartphones", 
-      description: "Discover the latest smartphones with cutting-edge features.", 
-      image: "/images/products/galaxy-15-removebg-preview.png"
-    },
-    { 
-      id: 2, 
-      name: "Computers", 
-      description: "Explore powerful laptops and computers for work and play.", 
-      image: "/images/products/dell-gaming-removebg-preview.png"
-    },
-    { 
-      id: 3, 
-      name: "Headphones", 
-      description: "Experience immersive audio with headphones and speakers.", 
-      image: "/images/products/senheiser-removebg-preview.png"
-    },
-    { 
-      id: 4, 
-      name: "Watches", 
-      description: "Level up your gaming experience with consoles and accessories.", 
-      image: "/images/products/apple-watch-9-3-removebg-preview.png"
-    },
-    // Add more category data as needed
-  ];
-  
+export const dummyCategories = [
+  {
+    id: 1,
+    name: "Pakan Ikan",
+    description:
+      "Nutrisi tinggi dari limbah agro-maritim untuk pertumbuhan optimal ikan air tawar dan payau.",
+    image: "/images/products/pakan1.jpg",
+  },
+  {
+    id: 2,
+    name: "Pakan Ternak",
+    description:
+      "Pakan fermentasi dari limbah pertanian seperti jerami dan ampas tebu, mendukung kesehatan ternak secara organik.",
+    image: "/images/products/pakan2.jpg",
+  },
+  {
+    id: 3,
+    name: "Pakan Burung",
+    description:
+      "Pakan alami dari limbah buah dan biji-bijian reject untuk burung kicau dan hias, kaya nutrisi dan bebas bahan kimia.",
+    image: "/images/products/pakan1.jpg",
+  },
+];

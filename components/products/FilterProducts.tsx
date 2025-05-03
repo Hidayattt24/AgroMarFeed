@@ -164,7 +164,7 @@ const FilterProducts = () => {
       </div>
 
       {/* filter by Colors */}
-      <div>
+      {/* <div>
         <h3 className="text-lg font-medium my-2">By Colors</h3>
         <div className="flex items-center justify-start gap-2 flex-wrap">
           {colors.map((color) => (
@@ -184,7 +184,7 @@ const FilterProducts = () => {
             </p>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* filter by Brand name */}
       <div>
