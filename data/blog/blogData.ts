@@ -1,109 +1,109 @@
 export const blogPosts = [
   {
-    title: "Top 5 Must-Have Gadgets for Students in 2024",
-    author: "John Doe (Tech Enthusiast)",
-    category: "Tech Trends",
+    title: "5 Alat Terbaik untuk Peternak dan Petani di Tahun 2024",
+    author: "Ahmad Fadly (Ahli Pertanian)",
+    category: "Tren Teknologi Pertanian",
     image: "/images/products/senheiser-removebg-preview.png",
     excerpt:
-      "Struggling to keep up with the latest tech trends as a student? This blog post dives into the top 5 gadgets that can help you ace your studies, stay organized, and have some fun on the go!",
+      "Bingung memilih alat yang tepat untuk mendukung usaha peternakan dan pertanian Anda? Artikel ini membahas 5 alat yang dapat membantu Anda meningkatkan efisiensi dan produktivitas dalam usaha agro-maritim!",
     content: [
       {
         type: "text",
-        text: `Imagine juggling classes, assignments, and a busy social life. Staying organized and productive can be a challenge. But fear not, tech enthusiasts! Here are the top 5 gadgets every student should consider in 2024:`,
+        text: `Sebagai peternak atau petani, memilih alat yang tepat sangat penting untuk menjaga kelangsungan dan keberhasilan usaha. Berikut adalah 5 alat yang wajib dimiliki di tahun 2024 untuk memaksimalkan hasil usaha pertanian dan peternakan Anda:`,
       },
       {
         type: "image",
         src: "/images/products/prothonics-removebg-preview.png",
-        alt: "Noise-Canceling Headphones",
+        alt: "Kabel Penghubung Tanaman",
       },
       {
         type: "text",
-        text: `1. Noise-Canceling Headphones: Block out distractions in the library or dorm room with a pair of noise-canceling headphones. Focus on lectures, study sessions, or simply unwind with your favorite music without the background noise.`,
+        text: `1. Alat Pemantau Kualitas Tanah: Alat ini akan membantu Anda mengukur pH, kelembaban, dan kandungan nutrisi tanah secara akurat. Ini penting untuk menentukan jenis tanaman yang cocok dan mengoptimalkan hasil pertanian.`,
       },
       {
         type: "text",
-        text: `2. Portable Charger: A reliable portable charger ensures your devices stay powered throughout the day. Whether you're attending back-to-back classes or exploring campus, a portable charger keeps you connected and avoids the dreaded low-battery anxiety.`,
+        text: `2. Charger Portable: Charger portable yang handal dapat memastikan perangkat elektronik Anda tetap terisi sepanjang hari. Ini sangat berguna saat Anda bekerja di lapangan dan membutuhkan daya untuk alat atau smartphone Anda.`,
       },
       {
         type: "text",
-        text: `3. Tablet with Stylus: Take note-taking to a whole new level with a tablet and stylus combo. Ditch bulky notebooks and scribble down ideas, annotate documents, or create mind maps with ease. The portability and versatility of a tablet make it a valuable tool for on-the-go learning.`,
+        text: `3. Drone Pertanian: Drone ini dapat membantu Anda memantau tanaman dari udara, mengidentifikasi masalah lebih awal, dan mengoptimalkan penggunaan pupuk dan pestisida secara efisien.`,
       },
       {
         type: "image",
         src: "/images/products/apple-watch-9-3-removebg-preview.png",
-        alt: "Smartwatch",
+        alt: "Smartwatch untuk Petani",
       },
       {
         type: "text",
-        text: `4. Smartwatch: Stay organized and manage your time effectively with a smartwatch. Set reminders for deadlines, track your daily activity, and even receive notifications without needing to reach for your phone every time.`,
+        text: `4. Smartwatch: Menjaga waktu dan mengatur pengingat untuk jadwal pemberian pakan atau pengairan dapat lebih mudah dengan smartwatch. Dengan fitur pengingat dan pelacakan aktivitas, Anda dapat tetap produktif tanpa khawatir.`,
       },
       {
         type: "text",
-        text: `5. Wireless Earbuds: Convenience meets quality with a pair of wireless earbuds. Enjoy crystal-clear audio while studying, listening to podcasts, or taking calls without the hassle of tangled wires.`,
+        text: `5. Earbud Nirkabel: Nikmati audio berkualitas tinggi tanpa kabel saat mendengarkan pelatihan atau memantau suara di peternakan dengan earbud nirkabel yang praktis dan nyaman.`,
       },
     ],
     date: new Date(),
   },
   {
-    title: "The Ultimate Guide to Choosing the Perfect Gaming Laptop",
-    author: "Jane Smith (Gaming Expert)",
-    category: "Gaming",
+    title: "Panduan Memilih Laptop Tepat untuk UMKM Peternakan dan Budidaya",
+    author: "Jane Smith (Pakar Digital Agribisnis)",
+    category: "Digital Tools",
     image: "/images/products/asus-vivobook-removebg-preview.png",
     excerpt:
-      "Overwhelmed by the vast selection of gaming laptops? Fear not! This comprehensive guide will break down the key factors to consider when choosing the perfect machine for your gaming needs, ensuring smooth gameplay and an immersive experience.",
+      "UMKM di sektor peternakan atau perikanan kini tak bisa lepas dari teknologi. Laptop seperti apa yang cocok untuk kebutuhan harian mereka? Temukan jawabannya di sini.",
     content: [
       {
         type: "text",
-        text: "Your gaming laptop is your ultimate weapon in the virtual battlefield. But with so many options available, choosing the perfect gaming laptop can be a daunting task. Fear not, fellow gamers! Here's a comprehensive guide to help you make the right choice:",
+        text: "Dalam era digitalisasi pertanian dan peternakan, laptop menjadi alat kerja penting bagi pelaku UMKM. Artikel ini membahas fitur-fitur penting yang harus diperhatikan:",
       },
       {
         type: "text",
-        text: "1. Graphics Processing Unit (GPU): The GPU is the heart of a gaming laptop. It determines the quality of graphics and directly impacts gaming performance. Opt for a laptop with a powerful GPU from reputable brands like NVIDIA or AMD.",
+        text: "1. GPU: Dibutuhkan untuk memproses data sensor IoT atau mengedit video dokumentasi budidaya dan pelatihan online.",
       },
       {
         type: "image",
         src: "/images/products/msi-modern-14-2-removebg-preview.png",
-        alt: "Graphics Card",
+        alt: "Kartu Grafis",
       },
       {
         type: "text",
-        text: "2. Processor (CPU): A high-performance CPU is essential for smooth gameplay and multitasking. Look for laptops equipped with the latest generation processors from Intel or AMD, with a focus on clock speed and core count.",
-      },
-
-      {
-        type: "text",
-        text: "3. Display: The display is your window into the gaming world. Choose a laptop with a high refresh rate and resolution for immersive gaming experiences. Consider features like G-Sync or FreeSync for tear-free gaming.",
+        text: "2. CPU: Semakin cepat prosesornya, semakin lancar aktivitas administrasi, pencatatan pakan, dan pencetakan laporan keuangan usaha.",
       },
       {
         type: "text",
-        text: "4. RAM and Storage: Adequate RAM ensures smooth multitasking, while fast storage options like SSDs reduce load times and improve overall system responsiveness. Aim for at least 16GB of RAM and SSD storage for optimal performance.",
+        text: "3. Layar: Pilih layar jernih dan nyaman agar tidak cepat lelah saat digunakan berjam-jam mengelola toko online atau konsultasi daring.",
       },
       {
         type: "text",
-        text: "5. Cooling System: Intense gaming sessions can push your laptop's temperature to the limit. Look for laptops with efficient cooling systems, featuring multiple heat pipes, fans, and vapor chambers to keep temperatures in check.",
+        text: "4. RAM & Penyimpanan: Idealnya 16GB RAM dan SSD agar tidak lemot saat membuka banyak data Excel atau aplikasi CRM toko seperti AgroMarFeed.",
+      },
+      {
+        type: "text",
+        text: "5. Pendingin: Laptop yang tidak cepat panas cocok untuk digunakan di area peternakan tropis yang lembap.",
       },
     ],
     date: new Date(),
   },
   {
-    title: "Smart Home Devices That Make Your Life Easier",
-    author: "David Lee (Tech Lifestyle Blogger)",
-    category: "Smart Home",
+    title:
+      "5 Perangkat Smart Home yang Bermanfaat untuk Peternak & Pembudidaya",
+    author: "David Lee (Blogger Gaya Hidup Hijau)",
+    category: "Smart Farming",
     image: "/images/products/galaxy-15-removebg-preview.png",
     excerpt:
-      "Take control of your home with the power of smart technology! This blog post explores a variety of smart home devices that can automate tasks, improve your security, and even boost your energy efficiency.",
+      "Otomatisasi bukan hanya untuk rumah mewah. Berikut ini 5 perangkat smart home yang bisa disesuaikan untuk kebutuhan peternak kecil-menengah di era modern.",
     content: [
       {
         type: "text",
-        text: "Transform your home into a futuristic oasis with smart home devices that bring convenience, comfort, and efficiency to your fingertips. From automated lighting to intelligent thermostats, here are some must-have smart home devices:",
+        text: "Teknologi pintar kini menjangkau peternakan dan rumah pembudidaya. Dengan sedikit kreativitas, alat-alat smart home bisa bantu meringankan pekerjaan sehari-hari. Berikut pilihannya:",
       },
       {
         type: "text",
-        text: "1. Smart Thermostat: Regulate your home's temperature with precision and efficiency using a smart thermostat. Control your heating and cooling systems remotely, set schedules, and optimize energy usage to save on utility bills.",
+        text: "1. Termostat Pintar: Mengatur suhu kandang atau ruang fermentasi pakan agar tetap ideal untuk pertumbuhan mikroba.",
       },
       {
         type: "text",
-        text: "2. Smart Lighting: Illuminate your home with smart lighting solutions that offer customizable brightness, color options, and scheduling capabilities. Enjoy the convenience of controlling your lights from anywhere via smartphone or voice commands.",
+        text: "2. Lampu Otomatis: Jadwal pencahayaan kandang bisa diatur otomatis sesuai kebutuhan ternak.",
       },
       {
         type: "image",
@@ -112,17 +112,17 @@ export const blogPosts = [
       },
       {
         type: "text",
-        text: "3. Smart Security Cameras: Keep an eye on your home while you're away with smart security cameras that offer live streaming, motion detection, and two-way audio capabilities. Monitor your property from anywhere with peace of mind.",
+        text: "3. Kamera Keamanan: Monitor kandang atau kolam dari jarak jauh. Cocok untuk peternak dengan lahan luas.",
       },
       {
         type: "text",
-        text: "4. Smart Locks: Ditch the traditional keys and upgrade to smart locks for enhanced security and convenience. Grant access to family members, friends, or service providers remotely and receive instant alerts for unauthorized access attempts.",
+        text: "4. Smart Locks: Mengamankan gudang pakan atau kandang ternak dari akses tak sah.",
       },
       {
         type: "text",
-        text: "5. Smart Plugs: Transform your ordinary appliances into smart devices with smart plugs. Schedule your devices to turn on or off automatically, monitor energy consumption, and control them remotely for added convenience and energy savings.",
+        text: "5. Smart Plug: Mengatur waktu pompa air kolam, lampu UV, atau mesin pencacah pakan secara otomatis.",
       },
     ],
     date: new Date(),
-  }
+  },
 ];
