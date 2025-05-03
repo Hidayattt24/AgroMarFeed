@@ -187,7 +187,7 @@ const FilterProducts = () => {
       </div> */}
 
       {/* filter by Brand name */}
-      <div>
+      {/* <div>
         <h3 className="text-lg font-medium my-2">By Brands</h3>
         <div className="flex items-center justify-start gap-2 flex-wrap">
           {brandsData.map((brand) => (
@@ -203,7 +203,7 @@ const FilterProducts = () => {
             </p>
           ))}
         </div>
-      </div>
+      </div> */}
       <div>
         <Button onClick={clearFilter} variant={"outline"} className="w-full">
           Clear Filter
