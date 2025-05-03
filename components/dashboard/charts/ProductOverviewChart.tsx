@@ -15,10 +15,9 @@ import {
 const ProductOverviewChart = () => {
   // Sample data for the charts
   const productData = [
-    { name: "Electronics", Sales: 3000 },
-    { name: "Clothing", Sales: 5000 },
-    { name: "Home Appliances", Sales: 4000 },
-    { name: "Books", Sales: 2000 },
+    { name: "Pakan Ikan", Sales: 3000 },
+    { name: "Pakan Ternak", Sales: 5000 },
+    { name: "Pakan Burung", Sales: 4000 },
   ];
 
   return (
