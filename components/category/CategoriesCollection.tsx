@@ -18,15 +18,15 @@ const CategoriesCollection = () => {
   };
 
   const watches = productsData.filter(
-    (item) => item.category.toLowerCase() === "watches"
+    (item) => item.category.toLowerCase() === "pakan ikan"
   );
 
   const headphones = productsData.filter(
-    (item) => item.category.toLowerCase() === "headphones"
+    (item) => item.category.toLowerCase() === "pakan ternak"
   );
 
   const computers = productsData.filter(
-    (item) => item.category.toLowerCase() === "computers"
+    (item) => item.category.toLowerCase() === "pakan burung"
   );
 
   return (
@@ -38,7 +38,8 @@ const CategoriesCollection = () => {
           className="flex flex-col gap-4 items-start justify-between p-4 md:p-8 rounded-xl bg-white dark:bg-slate-900 shadow-md"
         >
           <h2 className="text-xl md:text-2xl text-center font-semibold my-4 w-full">
-            Best Deals For You On <span className="text-2xl font-bold">{watches[0].category}</span>
+            Best Deals For You On{" "}
+            <span className="text-2xl font-bold">{watches[0].category}</span>
           </h2>
           <div className="grid grid-cols-2 gap-4 place-content-center w-full">
             {watches?.slice(0, 4)?.map((watch) => (
@@ -83,7 +84,8 @@ const CategoriesCollection = () => {
           className="flex flex-col gap-4 items-start justify-between p-4 md:p-8 rounded-xl bg-white dark:bg-slate-900 shadow-md"
         >
           <h2 className="text-xl md:text-2xl text-center font-semibold my-4 w-full">
-            Best Deals For You On <span className="text-2xl font-bold">{headphones[0].category}</span>
+            Best Deals For You On{" "}
+            <span className="text-2xl font-bold">{headphones[0].category}</span>
           </h2>
           <div className="grid grid-cols-2 gap-4 place-content-center w-full">
             {headphones?.slice(0, 4)?.map((headphone) => (
@@ -128,7 +130,8 @@ const CategoriesCollection = () => {
           className="flex flex-col gap-4 items-start justify-between p-4 md:p-8 rounded-xl bg-white dark:bg-slate-900 shadow-md"
         >
           <h2 className="text-xl md:text-2xl text-center font-semibold my-4 w-full">
-            Best Deals For You On <span className="text-2xl font-bold">{computers[0].category}</span>
+            Best Deals For You On{" "}
+            <span className="text-2xl font-bold">{computers[0].category}</span>
           </h2>
           <div className="grid grid-cols-2 gap-4 place-content-center w-full">
             {computers?.slice(0, 4)?.map((computer) => (
