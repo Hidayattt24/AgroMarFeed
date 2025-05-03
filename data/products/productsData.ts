@@ -379,7 +379,7 @@ export const productsData = [
   {
     id: 14,
     name: "Pakan Burung dari Limbah Buah & Biji-bijian Reject",
-    category: "pakan ternak",
+    category: "pakan burung",
     description:
       "Campuran alami dari biji-bijian dan limbah buah kering yang bergizi untuk burung peliharaan dan unggas eksotis. Aman dan bebas bahan kimia.",
     aboutItem: [
