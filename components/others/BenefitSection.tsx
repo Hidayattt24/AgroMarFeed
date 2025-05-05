@@ -1,7 +1,10 @@
 import React from "react";
-import Image from "next/image";
 import { Leaf, Truck, GraduationCap, Users } from "lucide-react";
 import Logo from "../logo/Logo";
+
+interface BenefitsSectionProps {
+  textCenter?: boolean;
+}
 
 const BenefitCard = ({
   icon,
@@ -25,10 +28,16 @@ const BenefitCard = ({
   );
 };
 
-const BenefitsSection = () => {
+const BenefitsSection: React.FC<BenefitsSectionProps> = ({
+  textCenter = true,
+}) => {
   return (
     <section className="bg-[#ffffff] py-16 px-6">
-      <div className="max-w-screen-xl mx-auto text-center mb-12">
+      <div
+        className={`max-w-screen-xl mx-auto ${
+          textCenter ? "text-center" : "text-left"
+        } mb-12`}
+      >
         <div className="flex flex-col items-center space-y-2">
           <Logo />
           <h2 className="text-3xl font-bold text-[#2F2E1F]">

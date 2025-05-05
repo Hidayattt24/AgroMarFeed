@@ -18,8 +18,8 @@ const TestimonialsSection = ({ textCenter }: { textCenter: boolean }) => {
           className={cn(
             "text-3xl md:text-5xl  font-bold text-gray-900 dark:text-white mb-12 p-2 w-fit ",
             textCenter
-              ? "text-center border-l-4 border-l-rose-500 mx-auto "
-              : "text-start border-l-4 border-l-rose-500"
+              ? "text-center border-l-4 border-l-[#FFA726] mx-auto "
+              : "text-start border-l-4 border-l-[#FFA726]"
           )}
         >
           What Our Customers Say
