@@ -8,11 +8,14 @@ import Logo from "../logo/Logo";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-700 text-white py-8 px-4 md:px-8">
+    <footer className="bg-oliveDark text-white py-8 px-4 md:px-8">
       <div className="max-w-screen-xl mx-auto p-4 md:p-8 flex md:flex-row flex-wrap gap-4 md:gap-2 justify-between">
         <div className="flex flex-col space-y-4 mb-8 md:mb-0">
           <Logo />
-          <p>Your trusted source for sustainable, eco-friendly animal feed.</p>
+          <p>
+            Pelet ikan, pakan ayam, dan ternak dari limbah agro-maritim. Hemat
+            hingga 30%! Beli pakan, bantu bumi.
+          </p>
           <div className="flex space-x-4">
             <Link href="https://www.facebook.com" className="">
               <FaFacebook size={30} />
