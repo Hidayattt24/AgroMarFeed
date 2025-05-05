@@ -1,63 +1,67 @@
 import React from "react";
+import Image from "next/image";
 import { Leaf, Truck, GraduationCap, Users } from "lucide-react";
+import Logo from "../logo/Logo";
 
-const BenefitsSection = ({ textCenter }: { textCenter: boolean }) => {
+const BenefitCard = ({
+  icon,
+  title,
+  description,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}) => {
   return (
-    <section className="py-16 bg-gray-100 dark:bg-gray-800">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        {!textCenter ? (
-          <div className="flex flex-wrap items-center justify-center md:justify-between mb-12">
-            <h2 className="text-3xl md:text-5xl !text-center md:text-start font-bold  text-gray-900 dark:text-white border-l-4 p-2 border-l-rose-500 ">
-              Keunggulan AgroMarFeed
-            </h2>
-          </div>
-        ) : (
-          <h2 className="text-3xl md:text-5xl font-bold text-start md:text-center text-gray-900 dark:text-white mb-12 border-l-4  border-l-rose-500 w-fit mx-auto p-2">
-            Keunggulan AgroMarFeed
+    <div className="flex items-start gap-4">
+      <div className="w-12 h-12 bg-[#FFA726] flex items-center justify-center rounded-full">
+        {icon}
+      </div>
+      <div>
+        <h3 className="text-lg font-semibold text-[#2F2E1F]">{title}</h3>
+        <p className="text-sm text-[#4B3C2F]">{description}</p>
+      </div>
+    </div>
+  );
+};
+
+const BenefitsSection = () => {
+  return (
+    <section className="bg-[#ffffff] py-16 px-6">
+      <div className="max-w-screen-xl mx-auto text-center mb-12">
+        <div className="flex flex-col items-center space-y-2">
+          <Logo />
+          <h2 className="text-3xl font-bold text-[#2F2E1F]">
+            Kenapa Pilih AgroMarFeed?
           </h2>
-        )}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          <div className="flex flex-col items-center space-y-4 bg-white dark:bg-gray-700 rounded-lg p-6 shadow-md">
-            <Leaf size={48} className="text-green-600" />
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-              Berbasis Zero Waste
-            </h3>
-            <p className="text-gray-700 dark:text-gray-300 text-center">
-              Mengolah limbah agro-maritim menjadi pakan bernutrisi tinggi —
-              mendukung ekonomi sirkular dan ramah lingkungan.
-            </p>
-          </div>
-          <div className="flex flex-col items-center space-y-4 bg-white dark:bg-gray-700 rounded-lg p-6 shadow-md">
-            <Truck size={48} className="text-blue-500" />
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-              Gratis Ongkir Lokal
-            </h3>
-            <p className="text-gray-700 dark:text-gray-300 text-center">
-              Pengiriman gratis untuk mitra lokal di area tertentu, membantu
-              efisiensi biaya peternak mikro.
-            </p>
-          </div>
-          <div className="flex flex-col items-center space-y-4 bg-white dark:bg-gray-700 rounded-lg p-6 shadow-md">
-            <GraduationCap size={48} className="text-yellow-500" />
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-              Edukasi & Konsultasi
-            </h3>
-            <p className="text-gray-700 dark:text-gray-300 text-center">
-              Dapatkan panduan, pelatihan, dan konsultasi gratis untuk peternak
-              melalui fitur edukatif kami.
-            </p>
-          </div>
-          <div className="flex flex-col items-center space-y-4 bg-white dark:bg-gray-700 rounded-lg p-6 shadow-md">
-            <Users size={48} className="text-indigo-500" />
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-              Akses untuk Semua
-            </h3>
-            <p className="text-gray-700 dark:text-gray-300 text-center">
-              Dirancang untuk peternak mikro, UMKM, dan komunitas lokal — mudah
-              dijangkau dan inklusif.
-            </p>
-          </div>
+          <p className="text-sm text-[#4B3C2F] max-w-md">
+            Pelet ikan, pakan ayam, dan ternak dari limbah agro-maritim. Hemat
+            hingga 30%! Beli pakan, bantu bumi.
+          </p>
         </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <BenefitCard
+          icon={<Leaf size={40} className="text-white" />}
+          title="Berbasis Zero Waste"
+          description="Pelet ikan, pakan ayam, dan ternak dari limbah agro-maritim. Hemat hingga 30%! Beli pakan, bantu bumi."
+        />
+        <BenefitCard
+          icon={<Users size={40} className="text-white" />}
+          title="Akses untuk Semua"
+          description="Pelet ikan, pakan ayam, dan ternak dari limbah agro-maritim. Hemat hingga 30%! Beli pakan, bantu bumi."
+        />
+        <BenefitCard
+          icon={<Truck size={40} className="text-white" />}
+          title="Gratis Ongkir Lokal"
+          description="Pelet ikan, pakan ayam, dan ternak dari limbah agro-maritim. Hemat hingga 30%! Beli pakan, bantu bumi."
+        />
+        <BenefitCard
+          icon={<GraduationCap size={40} className="text-white" />}
+          title="Edukasi & Konsultasi"
+          description="Pelet ikan, pakan ayam, dan ternak dari limbah agro-maritim. Hemat hingga 30%! Beli pakan, bantu bumi."
+        />
       </div>
     </section>
   );
