@@ -14,6 +14,9 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   title: "AgroMarFeed",
   description: "your ultimate feed solutions shop",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
