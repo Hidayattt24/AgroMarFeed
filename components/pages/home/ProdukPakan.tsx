@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { Heart } from "lucide-react";
 
 const ProdukPakan = () => {
-  const [activeCategory, setActiveCategory] = useState("Pakan Ikan");
+  const [activeCategory, setActiveCategory] = useState("");
 
   const categories = ["Pakan Ikan", "Pakan Ternak", "Pakan Ayam", "Pakan Burung"];
 

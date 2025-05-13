@@ -10,8 +10,8 @@ export default function Header() {
 
       {/* Navigation */}
       <nav className="bg-1 text-white px-8 py-3 rounded-full flex space-x-6 text-sm font-medium gap-4">
-        <a href="#" className="hover:underline">Beranda</a>
-        <a href="#" className="hover:underline">Cari Pakan</a>
+        <a href="/" className="hover:underline">Beranda</a>
+        <a href="/katalog" className="hover:underline">Cari Pakan</a>
         <a href="#" className="hover:underline">Konsul Pakan</a>
         <a href="#" className="hover:underline">Artikel & Tips</a>
       </nav>
