@@ -52,7 +52,7 @@ const Hero = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <Button href="/catalog" size="md" className="mb-6">
+            <Button href="/katalog" size="md" className="mb-6">
               Lihat Produk
               <ArrowRight className="ml-2" />
             </Button>
