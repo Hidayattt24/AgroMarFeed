@@ -7,10 +7,12 @@ import SegeraHadir from './components/pages/home/SegeraHadir'
 import Konsultasi from './components/pages/home/Konsultasi'
 import KenapaPilih from './components/pages/home/KenapaPililh'
 import LatestBlog from './components/pages/home/LatestBlog'
+import Header from './components/header/Header'
+import Footer from './components/footer/Footer'
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
       <BestSeller />
       <SpecialOffer />
@@ -19,6 +21,6 @@ export default function Home() {
       <Konsultasi />
       <KenapaPilih />
       <LatestBlog />
-    </main>
+    </>
   )
 }
