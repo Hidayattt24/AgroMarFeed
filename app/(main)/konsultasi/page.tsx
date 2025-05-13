@@ -1,8 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import Button from "../../components/ui/Button";
-import SearchBar from "../../components/ui/SearchBar";
+import Button from "../../../components/ui/Button";
+import SearchBar from "../../../components/ui/SearchBar";
 import { Clock, MapPin } from "lucide-react";
 
 export default function ConsultationPage() {
