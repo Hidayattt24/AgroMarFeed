@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import React, { useState } from "react";
 import { Search, Filter, Heart } from "lucide-react";
+import Link from "next/link";
 
 const Katalog = () => {
     const [activeCategory, setActiveCategory] = useState("");
@@ -138,48 +139,46 @@ const Katalog = () => {
                         className="flex overflow-x-auto gap-6 pb-4 hide-scrollbar"
                     >
                         {[...Array(5)].map((_, i) => (
-                            <div
-                                key={i}
-                                className="bg-7 rounded-2xl p-4 flex-shrink-0 w-72 flex flex-col"
-                            >
-                                {/* Gambar Produk */}
-                                <div className="w-full flex justify-center mb-4 pt-8">
-                                    <Image
-                                        src="/images/home/specialOffer1.png"
-                                        alt="Produk"
-                                        width={150}
-                                        height={120}
-                                        className="object-contain"
-                                    />
-                                </div>
+                            <Link href="/detail" className="flex-shrink-0 w-72">
+                                <div className="bg-7 rounded-2xl p-4 flex flex-col hover:shadow-lg transition cursor-pointer">
+                                    {/* Gambar Produk */}
+                                    <div className="w-full flex justify-center mb-4 pt-8">
+                                        <Image
+                                            src="/images/home/specialOffer1.png"
+                                            alt="Produk"
+                                            width={150}
+                                            height={120}
+                                            className="object-contain"
+                                        />
+                                    </div>
 
-                                {/* Judul Produk */}
-                                <h3 className="text-lg font-semibold text-left mb-2 text-black">
-                                    Scratch & Peck Feeds
-                                </h3>
+                                    {/* Judul Produk */}
+                                    <h3 className="text-lg font-semibold text-left mb-2 text-black">
+                                        Scratch & Peck Feeds
+                                    </h3>
 
-                                {/* Keterangan + Rating */}
-                                <div className="flex justify-between text-sm text-black/30 mb-2 px-1">
-                                    <span>Pakan ternak ayam</span>
-                                    <span className="flex items-center gap-1 text-yellow-500 text-[16px]">
-                                        ★ <span className="text-black/60">(4.5)</span>
-                                    </span>
-                                </div>
+                                    {/* Keterangan + Rating */}
+                                    <div className="flex justify-between text-sm text-black/30 mb-2 px-1">
+                                        <span>Pakan ternak ayam</span>
+                                        <span className="flex items-center gap-1 text-yellow-500 text-[16px]">
+                                            ★ <span className="text-black/60">(4.5)</span>
+                                        </span>
+                                    </div>
 
-                                {/* Harga + Aksi */}
-                                <div className="flex justify-between items-center px-1">
-                                    <span className="text-base font-semibold text-black">Rp120RB</span>
-                                    <div className="flex gap-2">
-                                        <button className="w-6 h-6 rounded-full bg-black text-xl text-white border border-black/10 flex items-center justify-center">
-                                            +
-                                        </button>
-
-                                        <button className="w-6 h-6 text-[#C7C7CC] hover:text-red-500 transition flex items-center justify-center">
-                                            <Heart className="w-6 h-6" />
-                                        </button>
+                                    {/* Harga + Aksi */}
+                                    <div className="flex justify-between items-center px-1">
+                                        <span className="text-base font-semibold text-black">Rp120RB</span>
+                                        <div className="flex gap-2">
+                                            <button className="w-6 h-6 rounded-full bg-black text-xl text-white border border-black/10 flex items-center justify-center">
+                                                +
+                                            </button>
+                                            <button className="w-6 h-6 text-[#C7C7CC] hover:text-red-500 transition flex items-center justify-center">
+                                                <Heart className="w-6 h-6" />
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </section>
@@ -193,48 +192,46 @@ const Katalog = () => {
                         className="flex overflow-x-auto gap-6 pb-4 hide-scrollbar"
                     >
                         {[...Array(5)].map((_, i) => (
-                            <div
-                                key={i}
-                                className="bg-7 rounded-2xl p-4 flex-shrink-0 w-72 flex flex-col"
-                            >
-                                {/* Gambar Produk */}
-                                <div className="w-full flex justify-center mb-4 pt-8">
-                                    <Image
-                                        src="/images/home/specialOffer1.png"
-                                        alt="Produk"
-                                        width={150}
-                                        height={120}
-                                        className="object-contain"
-                                    />
-                                </div>
+                            <Link href="/detail" className="flex-shrink-0 w-72">
+                                <div className="bg-7 rounded-2xl p-4 flex flex-col hover:shadow-lg transition cursor-pointer">
+                                    {/* Gambar Produk */}
+                                    <div className="w-full flex justify-center mb-4 pt-8">
+                                        <Image
+                                            src="/images/home/specialOffer1.png"
+                                            alt="Produk"
+                                            width={150}
+                                            height={120}
+                                            className="object-contain"
+                                        />
+                                    </div>
 
-                                {/* Judul Produk */}
-                                <h3 className="text-lg font-semibold text-left mb-2 text-black">
-                                    Scratch & Peck Feeds
-                                </h3>
+                                    {/* Judul Produk */}
+                                    <h3 className="text-lg font-semibold text-left mb-2 text-black">
+                                        Scratch & Peck Feeds
+                                    </h3>
 
-                                {/* Keterangan + Rating */}
-                                <div className="flex justify-between text-sm text-black/30 mb-2 px-1">
-                                    <span>Pakan ternak ayam</span>
-                                    <span className="flex items-center gap-1 text-yellow-500 text-[16px]">
-                                        ★ <span className="text-black/60">(4.5)</span>
-                                    </span>
-                                </div>
+                                    {/* Keterangan + Rating */}
+                                    <div className="flex justify-between text-sm text-black/30 mb-2 px-1">
+                                        <span>Pakan ternak ayam</span>
+                                        <span className="flex items-center gap-1 text-yellow-500 text-[16px]">
+                                            ★ <span className="text-black/60">(4.5)</span>
+                                        </span>
+                                    </div>
 
-                                {/* Harga + Aksi */}
-                                <div className="flex justify-between items-center px-1">
-                                    <span className="text-base font-semibold text-black">Rp120RB</span>
-                                    <div className="flex gap-2">
-                                        <button className="w-6 h-6 rounded-full bg-black text-xl text-white border border-black/10 flex items-center justify-center">
-                                            +
-                                        </button>
-
-                                        <button className="w-6 h-6 text-[#C7C7CC] hover:text-red-500 transition flex items-center justify-center">
-                                            <Heart className="w-6 h-6" />
-                                        </button>
+                                    {/* Harga + Aksi */}
+                                    <div className="flex justify-between items-center px-1">
+                                        <span className="text-base font-semibold text-black">Rp120RB</span>
+                                        <div className="flex gap-2">
+                                            <button className="w-6 h-6 rounded-full bg-black text-xl text-white border border-black/10 flex items-center justify-center">
+                                                +
+                                            </button>
+                                            <button className="w-6 h-6 text-[#C7C7CC] hover:text-red-500 transition flex items-center justify-center">
+                                                <Heart className="w-6 h-6" />
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </section>
@@ -248,52 +245,49 @@ const Katalog = () => {
                         className="flex overflow-x-auto gap-6 pb-4 hide-scrollbar"
                     >
                         {[...Array(5)].map((_, i) => (
-                            <div
-                                key={i}
-                                className="bg-7 rounded-2xl p-4 flex-shrink-0 w-72 flex flex-col"
-                            >
-                                {/* Gambar Produk */}
-                                <div className="w-full flex justify-center mb-4 pt-8">
-                                    <Image
-                                        src="/images/home/specialOffer1.png"
-                                        alt="Produk"
-                                        width={150}
-                                        height={120}
-                                        className="object-contain"
-                                    />
-                                </div>
+                            <Link href="/detail" className="flex-shrink-0 w-72">
+                                <div className="bg-7 rounded-2xl p-4 flex flex-col hover:shadow-lg transition cursor-pointer">
+                                    {/* Gambar Produk */}
+                                    <div className="w-full flex justify-center mb-4 pt-8">
+                                        <Image
+                                            src="/images/home/specialOffer1.png"
+                                            alt="Produk"
+                                            width={150}
+                                            height={120}
+                                            className="object-contain"
+                                        />
+                                    </div>
 
-                                {/* Judul Produk */}
-                                <h3 className="text-lg font-semibold text-left mb-2 text-black">
-                                    Scratch & Peck Feeds
-                                </h3>
+                                    {/* Judul Produk */}
+                                    <h3 className="text-lg font-semibold text-left mb-2 text-black">
+                                        Scratch & Peck Feeds
+                                    </h3>
 
-                                {/* Keterangan + Rating */}
-                                <div className="flex justify-between text-sm text-black/30 mb-2 px-1">
-                                    <span>Pakan ternak ayam</span>
-                                    <span className="flex items-center gap-1 text-yellow-500 text-[16px]">
-                                        ★ <span className="text-black/60">(4.5)</span>
-                                    </span>
-                                </div>
+                                    {/* Keterangan + Rating */}
+                                    <div className="flex justify-between text-sm text-black/30 mb-2 px-1">
+                                        <span>Pakan ternak ayam</span>
+                                        <span className="flex items-center gap-1 text-yellow-500 text-[16px]">
+                                            ★ <span className="text-black/60">(4.5)</span>
+                                        </span>
+                                    </div>
 
-                                {/* Harga + Aksi */}
-                                <div className="flex justify-between items-center px-1">
-                                    <span className="text-base font-semibold text-black">Rp120RB</span>
-                                    <div className="flex gap-2">
-                                        <button className="w-6 h-6 rounded-full bg-black text-xl text-white border border-black/10 flex items-center justify-center">
-                                            +
-                                        </button>
-
-                                        <button className="w-6 h-6 text-[#C7C7CC] hover:text-red-500 transition flex items-center justify-center">
-                                            <Heart className="w-6 h-6" />
-                                        </button>
+                                    {/* Harga + Aksi */}
+                                    <div className="flex justify-between items-center px-1">
+                                        <span className="text-base font-semibold text-black">Rp120RB</span>
+                                        <div className="flex gap-2">
+                                            <button className="w-6 h-6 rounded-full bg-black text-xl text-white border border-black/10 flex items-center justify-center">
+                                                +
+                                            </button>
+                                            <button className="w-6 h-6 text-[#C7C7CC] hover:text-red-500 transition flex items-center justify-center">
+                                                <Heart className="w-6 h-6" />
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </section>
-
             </motion.div>
         </section>
     );
