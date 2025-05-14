@@ -1,13 +1,73 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation"; // Add this import
 import { motion } from "framer-motion";
 import { Calendar, Clock, MapPin, User, Mail, Phone } from "lucide-react";
 
 export default function BookingPage() {
+  const router = useRouter(); // Add router instance
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
   const [currentStep, setCurrentStep] = useState(1);
   const [currentMonth, setCurrentMonth] = useState(new Date());
+
+  // Add form state
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+  });
+
+  // Add loading state
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Add form handler
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  // Add validation check
+  const isFormValid = () => {
+    return (
+      formData.firstName &&
+      formData.lastName &&
+      formData.email &&
+      formData.phone &&
+      selectedDate &&
+      selectedTime
+    );
+  };
+
+  // Update the confirmation handler to include booking details
+  const handleConfirmBooking = async () => {
+    if (!isFormValid() || isSubmitting) return;
+
+    setIsSubmitting(true);
+    try {
+      const bookingDetails = {
+        date: selectedDate?.toISOString(),
+        time: selectedTime,
+        ...formData,
+      };
+
+      // Navigate to payment with booking details
+      router.push(
+        `/pembayaran?booking=${encodeURIComponent(
+          JSON.stringify(bookingDetails)
+        )}`
+      );
+    } catch (error) {
+      console.error("Error submitting booking:", error);
+      alert("There was an error processing your booking. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const timeSlots = [
     "08:00 - 09:00",
@@ -293,8 +353,12 @@ export default function BookingPage() {
                     <User className="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
                     <input
                       type="text"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
                       className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-2/20 focus:border-2 transition-all"
                       placeholder="Masukkan nama depan"
+                      required
                     />
                   </div>
                 </div>
@@ -306,8 +370,12 @@ export default function BookingPage() {
                     <User className="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
                     <input
                       type="text"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
                       className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-2/20 focus:border-2 transition-all"
                       placeholder="Masukkan nama belakang"
+                      required
                     />
                   </div>
                 </div>
@@ -319,8 +387,12 @@ export default function BookingPage() {
                     <Mail className="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
                     <input
                       type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
                       className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-2/20 focus:border-2 transition-all"
                       placeholder="Masukkan email"
+                      required
                     />
                   </div>
                 </div>
@@ -332,8 +404,12 @@ export default function BookingPage() {
                     <Phone className="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
                     <input
                       type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
                       className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-2/20 focus:border-2 transition-all"
                       placeholder="Masukkan no. telepon"
+                      required
                     />
                   </div>
                 </div>
@@ -341,8 +417,27 @@ export default function BookingPage() {
 
               {/* Submit Button */}
               <div className="mt-8 flex justify-end">
-                <button className="bg-2 text-white px-8 py-3 rounded-lg hover:opacity-90 transition-all flex items-center">
-                  <span>Konfirmasi Booking</span>
+                <button
+                  className={`bg-2 text-white px-8 py-3 rounded-lg transition-all flex items-center gap-2
+                    ${
+                      !isFormValid() || isSubmitting
+                        ? "opacity-50 cursor-not-allowed"
+                        : "hover:opacity-90"
+                    }`}
+                  onClick={handleConfirmBooking}
+                  disabled={!isFormValid() || isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <span>Processing...</span>
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin ml-2"></div>
+                    </>
+                  ) : (
+                    <>
+                      <span>Konfirmasi Booking</span>
+                      <span>→</span>
+                    </>
+                  )}
                 </button>
               </div>
             </div>
