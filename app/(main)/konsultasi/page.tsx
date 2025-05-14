@@ -1,11 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Button from "../../../components/ui/Button";
 import SearchBar from "../../../components/ui/SearchBar";
 import { Clock, MapPin } from "lucide-react";
 
 export default function ConsultationPage() {
+  const router = useRouter();
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -13,6 +15,15 @@ export default function ConsultationPage() {
   }, []);
 
   if (!isMounted) return null;
+
+  // Handler untuk navigasi ke halaman pemesanan
+  const handleBooking = (consultationType: string, doctorName: string) => {
+    router.push(
+      `/pemesanan?type=${consultationType}&doctor=${encodeURIComponent(
+        doctorName
+      )}`
+    );
+  };
 
   const consultationTypes = [
     "Pakan ternak",
@@ -77,7 +88,8 @@ export default function ConsultationPage() {
               {[1, 2, 3].map((item) => (
                 <div
                   key={item}
-                  className="bg-white rounded-lg p-6 shadow-md group transition-all duration-300 hover:shadow-lg"
+                  onClick={() => handleBooking("online", "Sari Utami, M.M.")}
+                  className="bg-white rounded-lg p-6 shadow-md group transition-all duration-300 hover:shadow-lg cursor-pointer"
                 >
                   <h3 className="font-medium mb-2 text-black">
                     Sari Utami, M.M. - Ahli Pemasaran Hasil Tani
@@ -109,6 +121,26 @@ export default function ConsultationPage() {
                       peternakan Anda.
                     </p>
                   </div>
+
+                  {/* Add a visual indicator for clickable card */}
+                  <div className="mt-4 text-center">
+                    <span className="inline-flex items-center text-2 text-sm">
+                      Klik untuk pesan
+                      <svg
+                        className="w-4 h-4 ml-2"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        />
+                      </svg>
+                    </span>
+                  </div>
                 </div>
               ))}
             </div>
@@ -127,7 +159,8 @@ export default function ConsultationPage() {
               {[1, 2, 3].map((item) => (
                 <div
                   key={item}
-                  className="bg-white rounded-lg p-6 shadow-md group transition-all duration-300 hover:shadow-lg"
+                  onClick={() => handleBooking("offline", "Sari Utami, M.M.")}
+                  className="bg-white rounded-lg p-6 shadow-md group transition-all duration-300 hover:shadow-lg cursor-pointer"
                 >
                   <h3 className="font-medium mb-2 text-black">
                     Sari Utami, M.M. - Ahli Pemasaran Hasil Tani
@@ -162,6 +195,26 @@ export default function ConsultationPage() {
                       mendapatkan solusi praktis dalam pengelolaan peternakan
                       Anda.
                     </p>
+                  </div>
+
+                  {/* Add a visual indicator for clickable card */}
+                  <div className="mt-4 text-center">
+                    <span className="inline-flex items-center text-2 text-sm">
+                      Klik untuk pesan
+                      <svg
+                        className="w-4 h-4 ml-2"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        />
+                      </svg>
+                    </span>
                   </div>
                 </div>
               ))}
