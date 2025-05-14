@@ -344,7 +344,7 @@ export default function BookingPage() {
               <h3 className="text-lg font-semibold mb-6 text-black">
                 Detail Pribadi
               </h3>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-6 text-black">
                 <div>
                   <label className="block text-sm font-medium mb-2 text-gray-700">
                     Nama Depan<span className="text-red-500 ml-1">*</span>
