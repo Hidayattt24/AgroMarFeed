@@ -8,10 +8,15 @@
   --bg-5: rgba(109, 128, 68, 0.5);
   --bg-6: #c7c7cc;
   --bg-7: #f2f2f7;
-
-  --background: var(--bg-7);
+  
+ --background: var(--bg-7);
   --foreground: #171717;
 }
+
+
+.text-bg-1 { color: var(--bg-1); }
+.text-bg-2 { color: var(--bg-2); }
+.text-bg-3 { color: var(--bg-3); }
 
 @media (prefers-color-scheme: dark) {
   :root {

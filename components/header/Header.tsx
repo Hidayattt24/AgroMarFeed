@@ -1,6 +1,29 @@
-import { FaShoppingBasket, FaHeart, FaUserCircle } from "react-icons/fa";
+'use client';
+import { useState, useEffect } from 'react';
+import { FaShoppingBasket, FaHeart, FaUserCircle } from 'react-icons/fa';
+import { getCurrentUser } from '@/lib/auth'; // Adjust path to your auth file
+import { User } from '@/types'; // Adjust path to your types file
 
 export default function Header() {
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const response = await getCurrentUser();
+        setUser(response.user ?? null); // Convert undefined to null
+        setLoading(false);
+      } catch (error) {
+        console.error('Failed to fetch user:', error);
+        setUser(null);
+        setLoading(false);
+      
+      }
+    };
+    fetchUser();
+  }, );
+
   return (
     <header className="flex items-center justify-between px-10 py-8 bg-transparent absolute top-0 left-0 right-0 z-10">
       {/* Logo */}
@@ -12,8 +35,8 @@ export default function Header() {
         />
       </div>
 
-      {/* Navigation */}
-      <nav className="bg-1 text-white px-8 py-3 rounded-full flex space-x-6 text-sm font-medium gap-4">
+      {/* Navigation - Centered */}
+      <nav className="bg-1 text-white px-8 py-3 rounded-full flex space-x-6 text-sm font-medium gap-4 absolute left-1/2 transform -translate-x-1/2">
         <a href="#" className="hover:underline">
           Beranda
         </a>
@@ -28,17 +51,38 @@ export default function Header() {
         </a>
       </nav>
 
-      {/* Icons */}
+      {/* Icons or Auth Buttons */}
       <div className="flex items-center space-x-4">
-        <button className="bg-1 text-white p-2 rounded-full">
-          <FaShoppingBasket />
-        </button>
-        <button className="bg-1 text-white p-2 rounded-full">
-          <FaHeart />
-        </button>
-        <button className="bg-4 text-white p-2 rounded-full">
-          <FaUserCircle />
-        </button>
+        {loading ? (
+          <div>Loading...</div> // Replace with a spinner if desired
+        ) : user ? (
+          <>
+            <button className="bg-1 text-white p-2 rounded-full">
+              <FaShoppingBasket />
+            </button>
+            <button className="bg-1 text-white p-2 rounded-full">
+              <FaHeart />
+            </button>
+            <button className="bg-4 text-white p-2 rounded-full">
+              <FaUserCircle />
+            </button>
+          </>
+        ) : (
+          <>
+            <a
+              href="/auth/login"
+              className="bg-1 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-opacity-90"
+            >
+              Sign In
+            </a>
+            <a
+              href="auth/register"
+              className="bg-4 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-opacity-90"
+            >
+              Sign Up
+            </a>
+          </>
+        )}
       </div>
     </header>
   );
