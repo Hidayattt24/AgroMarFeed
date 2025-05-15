@@ -1,4 +1,3 @@
-// app/components/ui/Button.tsx
 import React from 'react';
 import Link from 'next/link';
 
@@ -18,16 +17,12 @@ const Button: React.FC<ButtonProps> = ({ children, href, onClick, className = ''
     lg: 'px-8 py-4 text-lg',
   };
   const colorStyles = 'bg-yellow-500 text-black hover:bg-yellow-400';
-  const hoverStyles = 'hover:bg-yellow-400';
-
-  const combinedClassName = `${baseStyle} ${sizeStyles[size]} ${colorStyles} ${hoverStyles} ${className}`;
+  const combinedClassName = `${baseStyle} ${sizeStyles[size]} ${colorStyles} ${className}`;
 
   if (href) {
     return (
-      <Link href={href}>
-        <button className={combinedClassName}>
-          {children}
-        </button>
+      <Link href={href} className={combinedClassName} onClick={onClick}>
+        {children}
       </Link>
     );
   }
