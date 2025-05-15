@@ -74,52 +74,55 @@ const Katalog = () => {
     (product: Product) => product.categoryOptions === "Pakan Ikan"
   );
 
-  const renderProductCard = (product: Product) => {
-    if (!product._id) {
-      console.warn("Product missing _id:", product);
-      return null;
-    }
+const renderProductCard = (product: Product) => {
+  if (!product._id) {
+    console.warn("Product missing _id:", product);
+    return null;
+  }
 
-    return (
-      <Link
-        href={`/detail/${product._id}`}
-        className="flex-shrink-0 w-72"
-        onClick={() => console.log("Navigating to:", `/detail/${product._id}`)}
-      >
-        <div className="bg-7 rounded-2xl p-4 flex flex-col hover:shadow-lg transition cursor-pointer">
-          <div className="w-full flex justify-center mb-4 pt-8">
-            <Image
-              src={product.imageUrl}
-              alt={product.name}
-              width={150}
-              height={120}
-              className="object-contain"
-            />
-          </div>
-          <h3 className="text-lg font-semibold text-left mb-2 text-black">{product.name}</h3>
-          <div className="flex justify-between text-sm text-black/30 mb-2 px-1">
-            <span>{product.categoryOptions}</span>
-            <span className="flex items-center gap-1 text-yellow-500 text-[16px]">
-              ★ <span className="text-black/60">({product.rating})</span>
-            </span>
-          </div>
-          <div className="flex justify-between items-center px-1">
-            <span className="text-base font-semibold text-black">
-              Rp{product.price.toLocaleString()}
-            </span>
-            <div className="flex gap-2">
-              <button className="w-6 h-6 rounded-full bg-black text-xl text-white border border-black/10 flex items-center justify-center">
-                +
-              </button>
-              <button className="w-6 h-6 text-[#C7C7CC] hover:text-red-500 transition flex items-center justify-center">
-                <Heart className="w-6 h-6" />
-              </button>
-            </div>
+  return (
+    <Link
+      href={`/detail/${product._id}`}
+      className="flex-shrink-0 w-72 h-[400px]"
+      onClick={() => console.log("Navigating to:", `/detail/${product._id}`)}
+    >
+      <div className="bg-7 rounded-2xl p-4 flex flex-col justify-between hover:shadow-lg transition cursor-pointer h-full">
+        <div className="w-full flex justify-center items-center mb-6 pt-2 h-60">
+          <Image
+            src={product.imageUrl}
+            alt={product.name}
+            width={200}
+            height={200}
+            className="object-contain w-full h-full"
+          />
+        </div>
+
+        <h3 className="text-lg font-semibold text-left text-black">{product.name}</h3>
+
+        <div className="flex justify-between text-sm text-black/30 mb-2 px-1">
+          <span>{product.categoryOptions}</span>
+          <span className="flex items-center gap-1 text-yellow-500 text-[16px]">
+            ★ <span className="text-black/60">({product.rating})</span>
+          </span>
+        </div>
+
+        <div className="flex justify-between items-center px-1">
+          <span className="text-base font-semibold text-black">
+            Rp{product.price.toLocaleString()}
+          </span>
+          <div className="flex gap-2">
+            <button className="w-6 h-6 rounded-full bg-black text-xl text-white border border-black/10 flex items-center justify-center">
+              +
+            </button>
+            <button className="w-6 h-6 text-[#C7C7CC] hover:text-red-500 transition flex items-center justify-center">
+              <Heart className="w-6 h-6" />
+            </button>
           </div>
         </div>
-      </Link>
-    );
-  };
+      </div>
+    </Link>
+  );
+};
 
   if (loading) {
     return <div className="text-center py-40">Loading...</div>;
