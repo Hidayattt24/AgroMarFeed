@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import SearchBar from "@/components/ui/SearchBar";
 import Button from "@/components/ui/Button";
+import Link from "next/link";
 
 export default function ArticlePage() {
   const [activeTab, setActiveTab] = useState("artikel");
@@ -175,15 +176,13 @@ export default function ArticlePage() {
                   {article.description}
                 </p>
 
-                {/* Add Read More Button */}
+                {/* Update the Button component in the article card */}
                 <div className="mb-4">
-                  <Button
-                    href={`/artikel/${article.id}`}
-                    size="sm"
-                    className="w-full bg-2 text-white hover:bg-2/90"
-                  >
-                    Baca Selengkapnya
-                  </Button>
+                  <Link href={`/artikel/${article.id}`}>
+                    <button className="w-full bg-2 text-white hover:bg-2/90 px-4 py-2 rounded-lg transition-all">
+                      Baca Selengkapnya
+                    </button>
+                  </Link>
                 </div>
 
                 {/* Author section with modified margin */}
