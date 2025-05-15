@@ -45,17 +45,17 @@ const Footer: React.FC = () => {
           <h3 className="font-semibold mb-4">Company</h3>
           <ul className="space-y-2 text-sm text-gray-300">
             <li>
-              <a href="#" className="hover:text-white">
+              <a href="/blog" className="hover:text-white">
                 Blog
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
+              <a href="/artikel" className="hover:text-white">
                 Artikel & Tips
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
+              <a href="/aboutus" className="hover:text-white">
                 About Us
               </a>
             </li>

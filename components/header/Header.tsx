@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { FaShoppingBasket, FaHeart, FaUserCircle } from "react-icons/fa";
 import { getCurrentUser } from "@/lib/auth"; // Adjust path to your auth file
 import { User } from "@/types"; // Adjust path to your types file
+import Link from "next/link";
 
 export default function Header() {
   const [user, setUser] = useState<User | null>(null);
@@ -56,15 +57,23 @@ export default function Header() {
           <div>Loading...</div> // Replace with a spinner if desired
         ) : user ? (
           <>
-            <button className="bg-1 text-white p-2 rounded-full">
-              <FaShoppingBasket />
-            </button>
-            <button className="bg-1 text-white p-2 rounded-full">
-              <FaHeart />
-            </button>
-            <button className="bg-4 text-white p-2 rounded-full">
-              <FaUserCircle />
-            </button>
+            <Link href="/keranjang">
+        <button className="bg-1 text-white p-2 rounded-full">
+          <FaShoppingBasket />
+        </button>
+      </Link>
+
+      <Link href="/wishlist">
+        <button className="bg-1 text-white p-2 rounded-full">
+          <FaHeart />
+        </button>
+      </Link>
+
+      <Link href="/profile">
+        <button className="bg-4 text-white p-2 rounded-full">
+          <FaUserCircle />
+        </button>
+      </Link>
           </>
         ) : (
           <>
