@@ -6,6 +6,7 @@ import React, { useState, useEffect } from "react";
 import { Search, Filter, Heart } from "lucide-react";
 import Link from "next/link";
 import { fetchProducts, Product } from "@/lib/api/fetchProducts";
+import ChatbotWidget from "@/components/ChatbotWidget";
 
 const Katalog = () => {
   const [activeCategory, setActiveCategory] = useState("");
@@ -134,6 +135,7 @@ const renderProductCard = (product: Product) => {
 
   return (
     <section className="bg-white py-40 w-full">
+      <ChatbotWidget />
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}

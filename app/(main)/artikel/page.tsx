@@ -5,6 +5,7 @@ import Image from "next/image";
 import SearchBar from "@/components/ui/SearchBar";
 import Link from "next/link";
 import { fetchArticles, Article } from "@/lib/api/fetchArticles";
+import ChatbotWidget from "@/components/ChatbotWidget";
 
 export default function ArticlePage() {
   const [activeTab, setActiveTab] = useState("artikel");
@@ -23,6 +24,7 @@ export default function ArticlePage() {
 
   return (
     <div className="min-h-screen pt-32 pb-16 bg-white">
+      <ChatbotWidget />
       <div className="container mx-auto px-4 max-w-5xl">
         <motion.div
           initial={{ y: 20, opacity: 0 }}

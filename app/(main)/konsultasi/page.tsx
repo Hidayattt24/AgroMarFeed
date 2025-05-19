@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Button from "../../../components/ui/Button";
 import SearchBar from "../../../components/ui/SearchBar";
 import { Clock, MapPin } from "lucide-react";
+import ChatbotWidget from "@/components/ChatbotWidget";
 
 export default function ConsultationPage() {
   const router = useRouter();
@@ -36,6 +37,7 @@ export default function ConsultationPage() {
 
   return (
     <div className="min-h-screen pt-32 pb-16 bg-7">
+      <ChatbotWidget />
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-8">
